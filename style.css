@@ -1,0 +1,212 @@
+/* Universal */
+
+html {
+	box-sizing: border-box;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 12px;	
+
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 5px 0;
+}
+
+.wrapper {
+	display: grid;
+	gap: 2px;
+	grid-template-columns: 250px 190px 1fr 190px 250px;
+	grid-template-rows: 200px 1fr 200px 90px;
+	height: 100vh;
+	grid-auto-flow: row;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+	display: inline;
+}
+
+/* 
+	====================
+	HEADER
+	====================
+*/
+header {
+	margin-top: 70px;
+	grid-area: 1 / 3 / 2 / 4;
+}
+
+.header-links {
+	display: grid;
+	height: 40px;
+	grid-template-columns: repeat(9, 1fr);
+	text-align: center;
+}
+
+.header-link {
+  background-image:
+    linear-gradient(
+      #888888 15%,
+      #707070 45%,
+      #5e5e5e 50%,
+      #5e5e5e 80%,
+      #777777 100%
+		);
+	color: white;
+	text-shadow: 0 -1px 0 black;
+	font-weight: 800;
+	width: 100%;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	cursor: pointer;
+	border-right: solid 1px #464646;
+}
+
+.logo {
+	height: 100%;
+}
+
+.logo img {
+	height: 20px;
+}
+.header-link:last-of-type {
+	border-radius: 0 5px 5px 0;
+	cursor: default;
+}
+.header-link:last-of-type:hover {
+	  background-image:
+    linear-gradient(
+      #888888 15%,
+      #707070 45%,
+      #5e5e5e 50%,
+      #5e5e5e 80%,
+      #777777 100%
+		);
+}
+.header-link:first-of-type {
+	border-radius: 5px 0 0 5px;
+}
+.header-link:hover {
+  background-image:
+    linear-gradient(
+      #575757 15%,
+      #434343 45%,
+      #383838 50%,
+      #383838 80%,
+      #383838 100%
+    );
+}
+
+.search-box {
+	display: flex;
+	justify-content: center;
+
+}
+
+.search {
+	width: 80%;
+	height: 80%;
+	background: none;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: inset 0 2px 0  #000;
+}
+
+/* 
+	===========================
+	BACKGROUND IMAGES / PROMOS
+	===========================
+*/
+.hero {
+	background: url("https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg")
+							50% 100% no-repeat;	
+
+	grid-area: 1 / 2 / 3 / 5;
+
+	z-index: -1;
+}
+
+/* promos section */
+.promos {
+	grid-area: 3 / 2 / 4 / 5;
+	display: flex;
+	width: 100%;
+}
+
+.promo img {
+	width: 100%;
+}
+
+
+/*
+	==============================
+	MAIN CENTER COLUMN WORDS
+	==============================
+*/
+.main-content {
+	grid-area: 2 / 3 / 3 / 4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.main-link {
+	display: flex;
+	justify-content: center;
+}
+
+/* 
+	===========================
+	FOOTER
+	===========================
+*/
+footer {
+
+	grid-area: 4 / 3 / 5 / 4;
+	display: grid;
+	height: 90px;
+	grid-template-columns: 1fr 1fr;
+}
+
+footer > * {
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+
+
+.footer-link {
+	border-right: 1px solid grey;
+	padding: 0 2px;
+	color: #08C;
+	cursor: pointer;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+}
+
+.last {
+	border: none
+}
+
+.legal-info {
+	display: flex;
+}
